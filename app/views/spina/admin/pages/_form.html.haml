@@ -37,9 +37,10 @@
 
     %nav#secondary.tabs
       %ul
-        - @tabs.each_with_index do |tab, i|
-          %li{class: (i==0 ? 'active' : '')}
-            = link_to t("spina.pages.#{tab}"), "##{tab}"
+        - unless @tabs.length == 1
+          - @tabs.each_with_index do |tab, i|
+            %li{class: (i==0 ? 'active' : '')}
+              = link_to t("spina.pages.#{tab}"), "##{tab}"
 
   = hidden_field_tag :locale, @locale
 

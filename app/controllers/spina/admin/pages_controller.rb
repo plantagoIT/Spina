@@ -88,7 +88,11 @@ module Spina
       end
 
       def set_tabs
-        @tabs = %w{page_content page_seo advanced}
+        if @current_spina_user.admin?
+          @tabs = %w{page_content page_seo advanced}
+        else
+          @tabs = %w{page_content}
+        end
       end
 
       def update_page_position(page, position, parent_id = nil)

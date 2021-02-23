@@ -12,7 +12,7 @@ module Spina
   PLUGINS = []
   THEMES = []
 
-  config_accessor :backend_path, :disable_frontend_routes, :storage, :max_page_depth, :locales, :embedded_image_size
+  config_accessor :backend_path, :disable_frontend_routes, :storage, :max_page_depth, :locales, :embedded_image_size, :allow_creating_pages, :allow_ordering_pages, :show_social_media, :show_analytics
 
   self.backend_path = 'admin'
 
@@ -29,4 +29,17 @@ module Spina
   # Default: 2000x2000px
   self.embedded_image_size = "2000x2000>"
 
+  # Plantago config stuff
+
+  # This allows the user to add new pages to the project
+  self.allow_creating_pages = false
+
+  # This allows the user to order the navigation menu
+  self.allow_ordering_pages = false
+
+  # Shows the social media entry in the primary navigation
+  self.show_social_media = false
+
+  # Shows the analytics entry in the primary navigation (for admins only)
+  self.show_analytics = false
 end

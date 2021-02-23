@@ -43,15 +43,16 @@ html
 html, body
   height: 100%
   font-family: $font-family
+  letter-spacing: 1px
   -webkit-font-smoothing: antialiased
 
 body
-  background: #f5f5fa
+  background: white
   min-width: 1024px
 
 // Primary navigation
 nav#primary
-  background: linear-gradient($primary-color-dark, $primary-color-light)
+  background: $primary-color-dark
   height: 100%
   overflow: hidden
   position: fixed
@@ -74,7 +75,7 @@ nav#primary
   ul li a
     color: #f5f5fa
     display: block
-    font-size: 15px
+    font-size: 18px
     font-weight: 600
     line-height: 54px
     opacity: .5
@@ -104,7 +105,7 @@ nav#primary
     opacity: 1
 
   ul li ul
-    background: linear-gradient($primary-color-dark, $primary-color-light)
+    background: $primary-color-dark
     bottom: 0
     left: 80px
     padding-top: 20px
@@ -197,7 +198,7 @@ nav#secondary
   ul li a
     color: #4b4b4d
     display: inline-block
-    font-size: 12px
+    font-size: 16px
     font-weight: 700
     line-height: 34px
     opacity: .5

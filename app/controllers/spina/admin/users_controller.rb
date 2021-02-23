@@ -2,8 +2,9 @@ module Spina
   module Admin
     class UsersController < AdminController
       before_action :set_breadcrumbs
-      before_action :authorize_admin, except: [:index]
+      before_action :authorize_admin, except: [:index, :edit, :update]
       before_action :set_user, only: [:edit, :update, :destroy]
+      before_action :authorize_admin_or_self, only: [:edit, :update]
 
       def index
         @users = User.all
@@ -32,7 +33,7 @@ module Spina
       def update        
         add_breadcrumb "#{@user}"
         if @user.update(user_params)
-          redirect_to spina.admin_users_url
+          redirect_to spina.edit_admin_user_url(@user)
         else
           flash.now[:alert] = I18n.t('spina.users.cannot_be_created')
           render :edit
@@ -56,6 +57,10 @@ module Spina
 
         def set_user
           @user = User.find(params[:id])
+        end
+
+        def authorize_admin_or_self
+          render status: 401 unless (current_spina_user.admin? or current_spina_user == @user)
         end
     end
   end
