@@ -1,0 +1,75 @@
+@import spina/configuration
+
+body
+  background: white
+
+html, body
+  letter-spacing: 1px
+
+  nav#primary
+    background: white
+
+    ul li 
+      input[type=radio]
+        display: none
+        &:checked + label
+          color: black
+        &:checked ~ ul
+          transform: translateX(0%)
+
+      label
+        cursor: pointer
+        color: grey
+        display: block
+        font-size: 18px
+        font-weight: 600
+        line-height: 54px
+        outline: none
+        padding: 0 20px
+        position: relative
+
+        .icon
+          font-size: 26px
+          margin-left: 5px
+          margin-right: 11px
+
+        .icon-caret-right
+          font-size: 18px
+          position: absolute
+          right: 10px
+
+        .icon-home
+          font-size: 32px
+          margin-left: 2px
+          margin-right: 8px
+
+      ul
+        background: white
+        border-left: solid 2px lightgrey
+        border-right: solid 2px lightgrey
+
+        a
+          color: black
+          transition: background .2s
+          &:hover
+            background: $primary-color
+
+      //TODO: fix the active tags
+      &.active
+          ul li.active
+            opacity: .5
+
+
+
+  // Overwrite some defaults used for javascript
+  nav#primary.transformed 
+    & > ul
+      background: none
+      li.active ul
+        transform: translateX(100%)
+
+    ul li.bottom a i
+      color: black
+
+
+
