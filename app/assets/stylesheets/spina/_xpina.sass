@@ -6,6 +6,7 @@ body
 html, body
   letter-spacing: 1px
 
+  // Admin navigation
   nav#primary
     background: white
 
@@ -59,8 +60,6 @@ html, body
           ul li.active
             opacity: .5
 
-
-
   // Overwrite some defaults used for javascript
   nav#primary.transformed 
     & > ul
@@ -71,5 +70,11 @@ html, body
     ul li.bottom a i
       color: black
 
+  // The main container with content
+  section#main
+    div.gallery-container div.gallery
+      a.item.media-folder.ui-droppable
+        background: lighten($primary-color, 45)
+        border: 1px solid $primary-color-light
 
 
