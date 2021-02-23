@@ -1,5 +1,7 @@
 @import spina/configuration
 
+$minimized-nav-width: 80px
+
 body
   background: white
 
@@ -9,6 +11,11 @@ html, body
   // Admin navigation
   nav#primary
     background: white
+    border-right: solid 2px lightgrey
+
+    &.minimized
+      // TODO: use variable for width
+      width: $minimized-nav-width
 
     ul li 
       input[type=radio]
@@ -47,7 +54,6 @@ html, body
       ul
         background: white
         border-left: solid 2px lightgrey
-        border-right: solid 2px lightgrey
 
         a
           color: black
@@ -59,6 +65,14 @@ html, body
       &.active
           ul li.active
             opacity: .5
+
+  #main
+    &.maximized
+      padding-left: $minimized-nav-width + 40px
+
+    header#header
+      &.maximized
+        left: $minimized-nav-width
 
   // Overwrite some defaults used for javascript
   nav#primary.transformed 

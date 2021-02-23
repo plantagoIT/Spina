@@ -1,0 +1,39 @@
+$(document).on('turbolinks:load', function(){
+  var hide = true
+  // Remember the last active navigation element
+  var last_active_nav_tmp = 'spina_primary_nav_home'
+  var last_active_nav = 'spina_primary_nav_home'
+
+  function minimize(){
+    $('#primary').addClass('minimized');
+    $('#main').addClass('maximized');
+    $('#header').addClass('maximized');
+    $('#spina_primary_nav_icon').removeClass('icon-chevron-left');
+    $('#spina_primary_nav_icon').addClass('icon-chevron-right');
+  }
+
+  $("[name='spina_primary_nav']").click(function(){
+    if ($('#spina_primary_nav_hide').is(':checked') && hide) {
+      last_active_nav = last_active_nav_tmp
+      minimize();
+      hide = false;
+    } else {
+      // When the show button is clicked, then set the last active element checked again
+      if ($(this).attr('id') == 'spina_primary_nav_hide'){
+        $("#" + last_active_nav).prop('checked', true)
+      }
+      $('#primary').removeClass('minimized');
+      $('#main').removeClass('maximized');
+      $('#header').removeClass('maximized');
+      $('#spina_primary_nav_icon').removeClass('icon-chevron-right')
+      $('#spina_primary_nav_icon').addClass('icon-chevron-left')
+      hide = true;
+    }
+    if (!($(this).attr('id') == 'spina_primary_nav_hide')){
+      last_active_nav_tmp = $(this).attr('id')
+    }
+  });
+
+  // hide stuff per default
+  minimize();
+});

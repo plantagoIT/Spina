@@ -34,6 +34,7 @@
 //= require ./tabs
 //= require ./forms
 //= require ./dropdown
+//= require ./navigation
 //= require ./notifications
 //= require ./media_gallery
 

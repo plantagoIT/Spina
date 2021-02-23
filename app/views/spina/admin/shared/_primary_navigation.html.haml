@@ -4,7 +4,6 @@
       = radio_button_tag 'spina_primary_nav', 'home', checked: true
       = label :spina_primary_nav, 'home', title: t('spina.website.title') do
         = icon('home')
-        = icon('caret-right')
 
       %ul
         %li{class: ('active' if (current_admin_path.start_with?('/pages') || current_admin_path.start_with?('/navigations')) && @page&.resource.blank?)}
@@ -29,7 +28,6 @@
       = radio_button_tag 'spina_primary_nav', 'preferences'
       = label :spina_primary_nav, 'preferences', title: t('spina.preferences.title') do
         = icon('cog')
-        = icon('caret-right')
 
       %ul
         %li{class: ('active' if params[:action] == 'edit' && params[:controller] == 'spina/admin/accounts')}
@@ -56,6 +54,11 @@
           - if plugin.settings.present?
             %li{class: ('active' if controller_name == 'settings' and params[:plugin] == plugin.namespace)}
               = link_to t("spina.#{plugin.namespace}.title").upcase, spina.admin_edit_settings_path(plugin.namespace)
+
+    %li
+      = radio_button_tag 'spina_primary_nav', 'hide'
+      = label :spina_primary_nav, 'hide', title: t('spina.hide.title') do
+        = icon 'chevron-left', id: :spina_primary_nav_icon
 
     %li.bottom
       = link_to spina.admin_logout_path, title: t('spina.logout'), data: {turbolinks: false} do
