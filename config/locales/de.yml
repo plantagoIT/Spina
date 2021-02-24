@@ -93,6 +93,11 @@ de:
       spina/user:
         one: Benutzer
         other: Benutzer
+  views:
+    spina:
+      user_mailer:
+        forgot: Du hast eine Account-Wiederherstellung beantragt. Bitte klicke auf den folgenden Link um dein Passwort wiederherzustellen. Falls du diese Mail nicht angefordert hast, bitte ignoriere sie.
+        reset_time: Dieser Link läuft in zwei Stunden ab.
   spina:
     ago: vor
     attachments:
