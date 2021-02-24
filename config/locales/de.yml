@@ -30,43 +30,43 @@ de:
       spina/media_folder:
         name: Name
       spina/navigation:
-        auto_add_pages: Automatisch hinzugefügte Seite
+        auto_add_pages: Seite automatisch hinzufügen
         auto_add_pages_description: Neue Seiten werden automatisch zum Menü hinzugefügt
         label: Label
         pages: Seiten
         pages_description: Wähle die Seiten aus, die du in diesem Menü verwenden willst
       spina/page:
-        ancestry: Elternseite
-        created_at: 
+        ancestry: Überseite
+        created_at: Erstellt am
         description: Meta Beschreibung
         description_description: Diese Beschreibung wird in den Suchergebnissen angezeigt
         description_placeholder: Kurze Beschreibung deiner Seite
         draft: Entwurf
-        draft_description: Great for when your page is not quite finished
+        draft_description: Seite als Entwurf speichern.
         link_url: Seitenumleitung
         link_url_description: Weiterleiten an URL
-        link_url_placeholder: z.B. http://www.example.com/
+        link_url_placeholder: z.B. http://www.beispiel.com/
         menu_title: Menü-Titel
         menu_title_placeholder: Leer lassen um den Seiten-Titel zu verwenden
         no_parent: Kein Eltern Element
-        resource: 
+        resource: Ressource
         seo_title: SEO <title>
-        seo_title_placeholder: Dieser Titel wird im <title>-tag verwendet
+        seo_title_placeholder: Dieser Titel wird im <title>-Tag verwendet
         show_in_menu: In der Navigation anzeigen
         show_in_menu_description: Wenn diese Option ausgeschaltet ist, wird deine Seite nicht in der Navigation angezeigt
-        skip_to_first_child: Vorwärts
-        skip_to_first_child_description: Zur ersten Seite
+        skip_to_first_child: Weiter
+        skip_to_first_child_description: Zur ersten Unterseite
         title: Titel
         title_placeholder: Seiten-Titel
-        url_title: 
-        url_title_description: 
-        url_title_placeholder: 
-        view_template: Seiten-Template
+        url_title: URL-Endung überschreiben
+        url_title_description: Optional
+        url_title_placeholder: URL-Endung
+        view_template: Seitenvorlage
       spina/resource:
-        label: 
-        order_by: 
-        parent_page: 
-        view_template: 
+        label: Label
+        order_by: Sortieren nach
+        parent_page: Überseite
+        view_template: Standardansicht Vorlage
       spina/user:
         admin: Administrator
         admin_description: Administratoren können Benutzer anlegen
@@ -101,14 +101,14 @@ de:
   spina:
     ago: vor
     attachments:
-      choose_attachment: 
+      choose_attachment: Anhang auswählen
       insert: Dokument einfügen
       insert_multiple: Dokumente einfügen
     cancel: Abbrechen
-    choose_from_library: Wähle aus Bibliothek
+    choose_from_library: Aus Bibliothek auswählen
     close: Schließen
     delete: Löschen
-    delete_confirmation: Bist du sicher, dass du <strong>%{subject}</strong> löschen möchtest?
+    delete_confirmation: Bist du sicher, dass du <strong>%{subject}</strong> löschen willst?
     edit: Bearbeiten
     edit_website: Deine Website bearbeiten
     forgot_password:
@@ -120,59 +120,59 @@ de:
       success: Du kannst dein neues Passwort verwenden
       unknown_user: Dieser Nutzer existiert nicht
     images:
-      all_images: 
-      back: 
-      cannot_be_created: 
-      choose_image: 
-      choose_images: 
-      confirm_selection: 
-      delete: 
-      delete_confirmation: 
-      delete_folder: 
-      done_organizing: 
-      insert_image: 
-      insert_photo: 
-      insert_photos: 
-      link: 
-      new_folder: 
-      organize: 
-      remove_image: 
-      upload: 
-      upload_image: 
+      all_images: Alle Bilder
+      back: Zurück
+      cannot_be_created: Kann nicht erstellt werden
+      choose_image: Bild wählen
+      choose_images: Bilder wählen
+      confirm_selection: Auswahl bestätigen
+      delete: Löschen
+      delete_confirmation: Bist du sicher, dass du dieses <strong>Bild</strong> löschen willst?
+      delete_folder: Ordner löschen
+      done_organizing: Sortierung beendet
+      insert_image: Bild einfügen
+      insert_photo: Foto einfügen
+      insert_photos: Fotos einfügen
+      link: Link
+      new_folder: Neuer Ordner 
+      organize: Organisieren
+      remove_image: Bild entfernen
+      upload: Bilder hochladen
+      upload_image: Bild hochladen
     languages:
-      bg: 
-      de: 
+      bg: Bulgarisch
+      de: Deutsch
       en: Englisch
-      es: 
-      fr: 
-      id: 
-      it: 
+      es: Spanisch
+      fr: Französisch
+      id: Indonesisch
+      it: Italienisch
       nl: Holländisch
-      pl: 
-      pt-BR: 
-      ro: 
-      ru: 
-      sv: 
-      th: 
-      tr: 
-      zh-CN: 
+      pl: Polnisch
+      pt-BR: Portugiesisch (Brasilien)
+      ro: Rumänisch
+      ru: Russisch
+      sv: Schwedisch
+      th: Thailändisch
+      tr: Türkisch
+      zh-CN: Chinesisch (vereinfacht)
     login: Login
     logout: Logout
     main_menu: Hauptmenü
     media_library:
       attachments: Dokumente
-      images: 
-      photos: Bilder
+      images: Bilder
+      photos: Fotos
     modal:
       agree: Ja, ich bin sicher
       cancel: Nein, abbrechen
     notifications:
-      alert: Oops! Etwas ist falsch gelaufen
+      alert: Hoppla! Etwas ist falsch gelaufen
       information: Information
       login: Du musst dich zuerst einloggen
       wrong_username_or_password: Falsche E-Mail oder Passwort
     options:
-      choose_option: 
+      choose_option: Option auswählen
     pages:
       advanced: Erweitert
       change_order: Reihenfolge ändern
@@ -181,7 +181,7 @@ de:
       delete_confirmation: Bist du sicher, dass du die Seite <strong>%{subject}</strong> löschen möchtest?
       done_changing_order: Reihenfolge speichern
       invisible_to_search_engines: Deine Website ist für Suchmaschinen nicht sichtbar.
-      invisible_to_search_engines_description: Gehe zu deinen Einstellungen um Suchmaschinen-Support zu aktivieren.
+      invisible_to_search_engines_description: Gehe zu deinen Einstellungen um Suchmaschinenunterstützung zu aktivieren.
       materialize_path_confirmation: Bist du sicher, dass du den Pfad für diese Seite neu erzeugen willst?
       new: Neue Seite
       page_content: Inhalt
@@ -199,7 +199,7 @@ de:
     photos:
       cannot_be_created: 'Bild kann nicht verarbeitet werden:'
       choose_images: Wähle Bilder aus
-      delete: 
+      delete: Löschen
       delete_confirmation: Bist du sicher, dass du das Bild <strong>%{image}</strong> löschen möchtest?
       delete_folder: Lösche Ordner
       done_organizing: Organisieren abgeschlossen
@@ -208,16 +208,16 @@ de:
       link: 'URL des Bildes:'
       new_folder: Neuer Ordner
       organize: Organisiere Bilder
-      rename_folder: 
-      select_images: 
+      rename_folder: Ordner umbenennen
+      select_images: Bilder auswählen
       upload_image: Bild hochladen
     preferences:
-      Analytics: 
+      Analytics: Analyse
       account: Allgemein
       account_description: Persönliche Einstellungen
       account_save: Einstellungen speichern
-      analytics: Analytics und Suchmaschinen
-      analytics_description: Vernetzte deinen Account für real-time Analysen
+      analytics: Analyse und Suchmaschinen
+      analytics_description: Vernetzte deinen Account für echtzeit Analysen
       analytics_save: Einstellungen speichern
       domain_name_settings: Domain Einstellungen
       domain_name_settings_description: Richte deine Domain ein
@@ -225,15 +225,15 @@ de:
       social_media: Social Media
       social_media_description: Facebook und Twitter Accounts
       social_media_save: Speichere Social Media
-      style: Style
-      style_description: Wähle einen passenden Style
-      style_save: Style speichern
+      style: Design
+      style_description: Wähle einen passendes Design
+      style_save: Design speichern
       title: Einstellungen
       users: Benutzer
       users_description: Benutzer und Administratoren verwalten
     preview_website: Vorschau der Webseite
     resources:
-      edit: 
+      edit: Ressource bearbeiten
     save: Speichern
     search: Suchen...
     settings:
@@ -248,7 +248,7 @@ de:
     website:
       all_pages: Alle Seiten
       documents: Dokumente
-      images: 
+      images: Bilder
       media_library: Medien-Bibliothek
       media_library_description: Hier findest du alle deine Bilder und Dokumente
       pages: Seiten
