@@ -12,13 +12,25 @@ module Spina
   PLUGINS = []
   THEMES = []
 
-  config_accessor :backend_path, :disable_frontend_routes, :storage, :max_page_depth, :locales, :embedded_image_size, :allow_creating_pages, :allow_ordering_pages, :show_social_media, :show_analytics
+  config_accessor :backend_path, 
+                  :frontend_parent_controller,
+                  :disable_frontend_routes,
+                  :max_page_depth, 
+                  :locales, 
+                  :embedded_image_size,
+                  :allow_creating_pages,
+                  :allow_ordering_pages,
+                  :show_social_media,
+                  :show_analytics
 
+  # Specify a backend path. Defaults to /admin.
   self.backend_path = 'admin'
+  
+  # The parent controller all frontend Spina controllers inherit from
+  # Default is ApplicationController
+  self.frontend_parent_controller = "ApplicationController"
 
   self.disable_frontend_routes = false
-
-  self.storage = :file
 
   self.max_page_depth = 5
 
