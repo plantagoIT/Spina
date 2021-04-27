@@ -4,6 +4,12 @@
 
 ⚠️ _Beware: lots of changes regarding page content. The old page parts are gone in favor of new JSON-based parts. Read the [Upgrading Guide](https://www.spinacms.com/guide/getting-started/upgrading-from-v1) to learn how to upgrade._
 
+### 2.0.2 (March 19th, 2021)
+* Fixed issue with webp images
+
+### 2.0.1 (March 18th, 2021)
+* Fixed issue with sorting repeater parts
+
 ### 2.0.0 (March 13th, 2021)
 _No changes since beta_
 
