@@ -39,6 +39,9 @@
       %ul
         - unless @tabs.length == 1
           - @tabs.each_with_index do |tab, i|
+            - # PLANTAGO
+            - if not current_spina_user.admin?
+              - next if ['page_seo', 'advanced'].include? tab
             %li{class: (i==0 ? 'active' : '')}
               = link_to t("spina.pages.#{tab}"), "##{tab}"
 
