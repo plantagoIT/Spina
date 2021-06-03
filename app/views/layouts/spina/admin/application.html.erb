@@ -6,9 +6,9 @@
     <meta name="turbo-cache-control" content="no-preview" />
     <%= csrf_meta_tags %>
     
-    <link rel="icon" href="<%= image_url('spina/favicon.png') %>" />
+    <!-- <link rel="icon" href="<%= image_url('spina/favicon.png') %>" /> -->
     
-    <title>Spina CMS</title>
+    <title>CMS | <%= current_account.name %></title>
     
     <!-- Tailwind -->    
     <%= stylesheet_link_tag 'spina/application', data: {turbolinks_track: true} %>
