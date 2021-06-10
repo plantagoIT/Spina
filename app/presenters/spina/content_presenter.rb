@@ -33,6 +33,18 @@ module Spina
       view_context.main_app.url_for(attachment) if attachment.present?
     end
 
+    def date(name, format = :date)
+      format = Time::DATE_FORMATS[format] unless format.is_a? String
+      date = find_part(name)&.content
+      I18n.l(date, format: format)
+    end
+
+    def time(name, format = :time)
+      format = Time::DATE_FORMATS[format] unless format.is_a? String
+      time = find_part(name)&.content
+      I18n.l(time, format: format)
+    end
+
     private
 
       def main_app_image_url(image, variant_options = {})
