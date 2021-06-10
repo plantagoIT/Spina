@@ -1,11 +1,14 @@
+require 'spina/importmap_helper'
 require 'spina/engine'
+require 'spina/admin_sectionable'
 require 'spina/railtie'
 require 'spina/plugin'
 require 'spina/theme'
+require 'spina/tailwind_purger'
 require 'spina/attr_json_spina_parts_model'
+require 'spina/attr_json_monkeypatch'
 
 module Spina
-
   include ActiveSupport::Configurable
 
   PARTS = []
@@ -18,11 +21,8 @@ module Spina
                   :max_page_depth,
                   :locales, 
                   :embedded_image_size,
-                  :allow_creating_pages,
-                  :allow_ordering_pages,
-                  :show_social_media,
-                  :show_analytics,
-                  :embedded_image_size
+                  :party_pooper,
+                  :tailwind_purge_content
 
 
   # Specify a backend path. Defaults to /admin.
@@ -37,6 +37,9 @@ module Spina
   self.max_page_depth = 5
 
   self.locales = [I18n.default_locale]
+  
+  # Don't like confetti?
+  self.party_pooper = false
 
   # Images that are embedded in the Trix editor are resized to fit
   # You can optimize this for your website and go for a smaller (or larger) size
@@ -60,18 +63,14 @@ module Spina
   end
   
   self.embedded_image_size = [2000, 2000]
-
-  # Plantago config stuff
-
-  # This allows the user to add new pages to the project
-  self.allow_creating_pages = false
-
-  # This allows the user to order the navigation menu
-  self.allow_ordering_pages = false
-
-  # Shows the social media entry in the primary navigation
-  self.show_social_media = false
-
-  # Shows the analytics entry in the primary navigation (for admins only)
-  self.show_analytics = false
+  
+  # Tailwind purging
+  # Spina will by default purge all unused Tailwind classes by scanning
+  # the files listed below. You probably don't want to override this in 
+  # your main app. Spina Plugins can add files to this array.
+  self.tailwind_purge_content = Spina::Engine.root.glob("app/views/**/*.*") + 
+                                Spina::Engine.root.glob("app/components/**/*.*") + 
+                                Spina::Engine.root.glob("app/helpers/**/*.*") + 
+                                Spina::Engine.root.glob("app/assets/javascripts/**/*.js") +
+                                Spina::Engine.root.glob("app/**/tailwind/custom.css")
 end
