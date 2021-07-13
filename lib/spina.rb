@@ -25,6 +25,7 @@ module Spina
                   :tailwind_purge_content,
                   :queues
 
+
   # Specify a backend path. Defaults to /admin.
   self.backend_path = 'admin'
   
@@ -66,7 +67,6 @@ module Spina
   end
   
   self.embedded_image_size = [2000, 2000]
-
   
   # Tailwind purging
   # Spina will by default purge all unused Tailwind classes by scanning
@@ -77,5 +77,4 @@ module Spina
                                 Spina::Engine.root.glob("app/helpers/**/*.*") + 
                                 Spina::Engine.root.glob("app/assets/javascripts/**/*.js") +
                                 Spina::Engine.root.glob("app/**/tailwind/custom.css")
-
 end

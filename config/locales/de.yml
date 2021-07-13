@@ -33,14 +33,14 @@ de:
       spina/media_folder:
         name: Name
       spina/navigation:
-        auto_add_pages: Automatisch hinzugefügte Seite
+        auto_add_pages: Seite automatisch hinzufügen
         auto_add_pages_description: Neue Seiten werden automatisch zum Menü hinzugefügt
         label: Label
         pages: Seiten
         pages_description: Wähle die Seiten aus, die du in diesem Menü verwenden willst
       spina/page:
-        ancestry: Oberseite
-        created_at: Erstellt am 
+        ancestry: Überseite
+        created_at: Erstellt am
         description: Meta Beschreibung
         description_description: Diese Beschreibung wird in den Suchergebnissen angezeigt
         description_placeholder: Kurze Beschreibung deiner Seite
@@ -48,7 +48,7 @@ de:
         draft_description: Praktisch wenn deine Seite noch nicht ganz fertig ist
         link_url: Seitenumleitung
         link_url_description: Weiterleiten an URL
-        link_url_placeholder: z.B. http://www.example.com/
+        link_url_placeholder: z.B. http://www.beispiel.com/
         menu_title: Menü-Titel
         menu_title_placeholder: Leer lassen um den Seiten-Titel zu verwenden
         no_parent: Kein Oberelement
@@ -65,12 +65,12 @@ de:
         url_title: Prefix überschreiben
         url_title_description: Optional
         url_title_placeholder: Prefix
-        view_template: Seiten-Template
+        view_template: Seitenvorlage
       spina/resource:
         label: Label
-        order_by: Ordnen nach
-        parent_page: Oberseite
-        view_template: Standard View Template
+        order_by: Sortieren nach
+        parent_page: Überseite
+        view_template: Standard Vorlage
       spina/user:
         admin: Administrator
         admin_description: Administratoren können Benutzer anlegen
@@ -97,6 +97,11 @@ de:
       spina/user:
         one: Benutzer
         other: Benutzer
+  views:
+    spina:
+      user_mailer:
+        forgot: Du hast eine Account-Wiederherstellung beantragt. Bitte klicke auf den folgenden Link um dein Passwort wiederherzustellen. Falls du diese Mail nicht angefordert hast, bitte ignoriere sie.
+        reset_time: Dieser Link läuft in zwei Stunden ab.
   spina:
     accounts:
       contact_details: Kontaktangaben
@@ -113,10 +118,10 @@ de:
       insert_multiple: Dokumente einfügen
       upload: Dokumente Hochladen
     cancel: Abbrechen
-    choose_from_library: In Bibliothek auswählen
+    choose_from_library: Aus Bibliothek auswählen
     close: Schließen
     delete: Löschen
-    delete_confirmation: Bist du sicher, dass du <strong>%{subject}</strong> löschen möchtest?
+    delete_confirmation: Bist du sicher, dass du <strong>%{subject}</strong> löschen willst?
     edit: Bearbeiten
     edit_website: Deine Website bearbeiten
     forgot_password:
@@ -154,16 +159,16 @@ de:
       es: Spanisch
       fr: Französisch
       id: Indonesisch
-      it: Italiensich
-      nl: Holländisch
+      it: Italienisch
+      nl: Niederländisch
       pl: Polnisch
-      pt-BR: Brasilianisches Portugiesisch 
+      pt-BR: Portugiesisch (Brasilien) 
       ro: Rumänisch
       ru: Russisch
       sv: Schwedisch
       th: Thai
       tr: Türkisch
-      zh-CN: Vereinfachtes Chinesisch
+      zh-CN: Chinesisch (vereinfacht)
     layout:
       couldnt_be_saved: Layout konnte nicht gespeichert werden
       layout: Layout
@@ -205,7 +210,7 @@ de:
       no_navigations: Diese Webseite hat noch keine Navigationen. Du kannst eine in der Theme Konfiguration erstellen.
       sorting_saved: Reihenfolge gespeichert
     notifications:
-      alert: Ups! Etwas ist falsch gelaufen
+      alert: Hoppla! Etwas ist falsch gelaufen
       information: Information
       login: Du musst dich zuerst einloggen
       wrong_username_or_password: E-Mail oder Passwort falsch
@@ -228,7 +233,7 @@ de:
       done_changing_order: Reihenfolge speichern
       edit_translation: Übersetzung für %{language} editieren
       invisible_to_search_engines: Deine Website ist für Suchmaschinen nicht sichtbar.
-      invisible_to_search_engines_description: Gehe zu deinen Einstellungen um Suchmaschinen-Support zu aktivieren.
+      invisible_to_search_engines_description: Gehe zu deinen Einstellungen um Suchmaschinenunterstützung zu aktivieren.
       main_collection: Hauptkollektion
       materialize_path_confirmation: Bist du sicher, dass du den Pfad für diese Seite neu erzeugen willst?
       missing_translations: Fehlende Übersetzungen
@@ -279,25 +284,26 @@ de:
       account_description: Persönliche Einstellungen
       account_save: Einstellungen speichern
       analytics: Analytics und Suchmaschinen
-      analytics_description: Verknüpfe deinen Account für real-time Analysen
+      analytics_description: Verknüpfe deinen Account für echtzeit Analysen
       analytics_save: Einstellungen speichern
       domain_name_settings: Domain Einstellungen
       domain_name_settings_description: Richte deine Domain ein
+      profile: Profil
       social_media: Social Media
       social_media_description: Facebook und Twitter Accounts
       social_media_save: Speichere Social Media
-      style: Stil
-      style_description: Wähle einen passenden Stil
-      style_save: Stil speichern
+      style: Design
+      style_description: Wähle einen passendes Design
+      style_save: Design speichern
       title: Einstellungen
       users: Benutzer
       users_description: Benutzer und Administratoren verwalten
     preview_website: Vorschau der Webseite
     resources:
-      edit: Kollektion editieren
+      edit: Kollektion bearbeiten
       label_description: Label für diese Seiten Kollektion
       manual_sorting: Manuell sortieren
-      no_default_template: Kein Standard-Template
+      no_default_template: Kein Standardvorlage
       saved: Kollektion gespeichert
       settings: Einstellungen für %{label}
       settings_description: Alle Seiten in dieser Kollektion haben folgendes Prefix.
