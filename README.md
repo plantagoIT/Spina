@@ -1,6 +1,6 @@
-![Spina CMS](https://www.spinacms.com/spinacms.png)
+<img src="https://spinacms.com/spinacms.png" alt="Spina CMS" width="225"/>
 
-[Spina CMS](https://www.spinacms.com) is an easy to use CMS that features a clean interface without distractions. [Live demo](http://spinacms-demo.herokuapp.com/admin/pages)
+[Spina CMS](https://spinacms.com) is an easy to use CMS that features a clean interface without distractions. [Live demo](http://spinacms-demo.herokuapp.com/admin/pages)
 
 [![Ruby](https://github.com/SpinaCMS/Spina/actions/workflows/ruby.yml/badge.svg)](https://github.com/SpinaCMS/Spina/actions/workflows/ruby.yml)
 [![Code Climate](https://codeclimate.com/github/SpinaCMS/Spina/badges/gpa.svg)](https://codeclimate.com/github/SpinaCMS/Spina)
@@ -8,7 +8,7 @@
 [![Slack](https://slack-spinacms.herokuapp.com/badge.svg)](https://slack-spinacms.herokuapp.com)
 
 ## Getting Started
-[Read the guide](https://www.spinacms.com/guide) to learn more about how to use Spina. If you just want to get started, create a new Ruby on Rails app and follow these instructions:
+[Read the guide](https://www.spinacms.com/docs) to learn more about how to use Spina. If you just want to get started, create a new Ruby on Rails app and follow these instructions:
 
 Add the following line to your Gemfile:
 
@@ -60,6 +60,8 @@ Spina is released under the [MIT license](LICENSE.md).
 The Tailwind purger was created by [@dhh](https://twitter.com/dhh) for [tailwindcss-rails](https://github.com/rails/tailwindcss-rails)
 
 Icons were designed by [@steveschoger](https://twitter.com/steveschoger) - [Heroicons](https://github.com/tailwindlabs/heroicons).
+
+HotKeys support via [Hotkeys.js](https://wangchujiang.com/hotkeys/)
 
 The font used in Spina's admin panel is called Metropolis and was created by Chris Simpson [Metropolis](https://github.com/chrismsimpson/Metropolis)
 
