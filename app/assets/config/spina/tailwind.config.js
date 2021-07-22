@@ -7,9 +7,9 @@ module.exports = {
     extend: {
       colors: {
         spina: {
-          light: '#797ab8',
-          DEFAULT: '#6865b4',
-          dark: '#3a3a70'
+          light: '#ff583c',
+          DEFAULT: '#ff3a1e',
+          dark: '#e11c00'
         }
       }
     }

@@ -66,6 +66,10 @@ module Spina
         def set_user
           @user = User.find(params[:id])
         end
+
+        def authorize_admin_or_self
+          render status: 401 unless (current_spina_user.admin? or current_spina_user == @user)
+        end
     end
   end
 end

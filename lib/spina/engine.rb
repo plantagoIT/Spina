@@ -32,7 +32,9 @@ module Spina
         Spina::Parts::ImageCollection,
         Spina::Parts::Repeater,
         Spina::Parts::Option,
-        Spina::Parts::Attachment
+        Spina::Parts::Attachment,
+        Spina::Parts::Date,
+        Spina::Parts::Time
       )
     end
 

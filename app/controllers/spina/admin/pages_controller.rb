@@ -52,7 +52,7 @@ module Spina
         Mobility.locale = @locale
         if @page.update(page_params)
           if @page.saved_change_to_draft? && @page.live?
-            flash[:confetti] = t('spina.pages.published')
+            flash[:success] = t('spina.pages.published')
           else
             flash[:success] = t('spina.pages.saved')
           end
