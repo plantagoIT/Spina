@@ -1,4 +1,5 @@
 require 'sass-rails'
+require 'importmap-rails'
 require 'turbo-rails'
 require 'stimulus-rails'
 require 'ancestry'
@@ -6,8 +7,10 @@ require 'breadcrumbs_on_rails'
 require 'kaminari'
 require 'mobility'
 require 'rack-rewrite'
+require 'babosa'
 require 'attr_json'
 require 'view_component/engine'
+require 'jsonapi/serializer'
 
 module Spina
   class Engine < ::Rails::Engine
@@ -37,11 +40,21 @@ module Spina
         Spina::Parts::Time
       )
     end
-
-    initializer "spina.helpers" do
-      Rails.application.config.assets.configure do |env|
-        env.context_class.class_eval { include Spina::ImportmapHelper }
+    
+    initializer "spina.importmap" do
+      Spina.config.importmap.draw do
+        # Stimulus & Turbo
+        pin "@hotwired/stimulus", to: "stimulus.js"
+        pin "@hotwired/stimulus-autoloader", to: "stimulus-autoloader.js"
+        pin "@hotwired/turbo-rails", to: "turbo.js"
+        
+        # Spina entrypoint
+        pin "application", to: "spina/application.js"
+        
+        pin_all_from Spina::Engine.root.join("app/assets/javascripts/spina/controllers"), under: "controllers", to: "spina/controllers"
+        pin_all_from Spina::Engine.root.join("app/assets/javascripts/spina/libraries"), under: "libraries", to: "spina/libraries"
       end
     end
+    
   end
 end

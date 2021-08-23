@@ -1,16 +1,12 @@
 module Spina::SpinaHelper
 
-  def spina_include_tags
+  def spina_importmap_tags(entry_point = "application")
     safe_join [
-      javascript_include_tag("stimulus/libraries/es-module-shims", type: "module"),
-      tag.script(type: "importmap-shim", src: asset_path("spina/importmap.json")),
-      javascript_include_tag("stimulus/libraries/stimulus", type: "module-shim"),
-      javascript_include_tag("spina/libraries/trix")
+      javascript_inline_importmap_tag(Spina.config.importmap.to_json(resolver: self)),
+      javascript_importmap_module_preload_tags(Spina.config.importmap),
+      javascript_importmap_shim_tag,
+      javascript_import_module_tag(entry_point)
     ], "\n"
-  end
-  
-  def autoloader_include_tag
-    javascript_include_tag("stimulus/loaders/autoloader", type: "module-shim")
   end
 
 end

@@ -1,11 +1,45 @@
 # Spina CMS Changelog
 
+## 2.2
+
+### 2.3.5 (August 22nd, 2021)
+* Changed to esm-compatible build of Trix to fix bug in Firefox
+
+### 2.3.4 (August 17th, 2021)
+* Updated importmap and importmap-rails to 0.2.7
+* Updated turbo-rails and stimulus-rails
+
+### 2.3.3 (August 16th, 2021)
+* Pinned importmap-rails to 0.2.2 as a temporary workaround
+
+### 2.3.2 (August 16th, 2021)
+* Updated to new importmap API
+
+### 2.3.1 (August 13th, 2021)
+* Fixed bug `not present in the asset pipeline` in production
+
+### 2.3.0 (August 12th, 2021)
+* Added an API!
+* Added transliterations for non-latin characters in URLs
+* Updated Stimulus + Turbo
+* Updated importmap to use the importmap-rails gem
+* Updated Russian locales
+* Fixed overflow CSS-bug in media folders
+* Fixed focus CSS-bug in Chrome
+* Removed old importmap helpers
+
+### 2.2.0 (July 26th, 2021)
+* Added download link to attachments in media library
+* Added optional decorator loading to configuration
+* Fixed slug generation for non-latin characters
+* Refactored authentication as a replaceable module
+
 ## 2.1
 
 ### 2.1.1 (July 13th, 2021)
 * Fixed bugs with attachments (#746 / #747)
-* Updated spanish locales
-* Updated german locales
+* Updated Spanish locales
+* Updated German locales
 
 ### 2.1.0 (July 3rd, 2021)
 * Refactored all javascript with Hotwire
