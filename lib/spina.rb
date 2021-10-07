@@ -1,6 +1,7 @@
 require 'spina/engine'
 require 'spina/admin_sectionable'
 require 'spina/railtie'
+require 'spina/theme_reloader'
 require 'spina/plugin'
 require 'spina/theme'
 require 'spina/tailwind_purger'
@@ -8,11 +9,15 @@ require 'spina/attr_json_spina_parts_model'
 require 'spina/attr_json_monkeypatch'
 require 'spina/authentication/sessions'
 require 'spina/authentication/basic'
+require 'spina/embed'
+require 'spina/embeddable'
+require 'spina/embeds/trix_conversion'
 
 module Spina
   include ActiveSupport::Configurable
 
   PARTS = []
+  EMBEDS = []
   PLUGINS = []
   THEMES = []
 

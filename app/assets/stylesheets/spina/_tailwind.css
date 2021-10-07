@@ -2342,18 +2342,20 @@ trix-editor {
             user-select: none
   }
   figure.attachment {
+    margin: 0px;
+    display: inline-block
+  }
+  figure.attachment[data-trix-content-type="Spina::Image"] {
     max-height: 150px;
     max-width: 200px;
-    margin: 0px;
-    display: inline-block;
   }
-  figure.attachment img {
+  figure.attachment[data-trix-content-type="Spina::Image"] img {
     margin: 0px;
     border-radius: 0.375rem;
     -o-object-fit: contain;
        object-fit: contain;
   }
-  figure.attachment [data-label]:after {
+  figure.attachment[data-trix-content-type="Spina::Image"] [data-label]:after {
     content: attr(data-label);
     margin-top: 0.25rem;
     display: flex;
@@ -2367,7 +2369,7 @@ trix-editor {
     --tw-text-opacity: 1;
     color: rgba(107, 114, 128, var(--tw-text-opacity));
   }
-  figure[data-trix-mutable].attachment img {
+  figure[data-trix-mutable].attachment[data-trix-content-type="Spina::Image"] img {
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
@@ -2375,6 +2377,17 @@ trix-editor {
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
     --tw-ring-opacity: 1;
     --tw-ring-color: rgba(255, 88, 60, var(--tw-ring-opacity))
+  }
+  figure[data-trix-mutable][data-trix-content-type="application/vnd+spina.embed+html"].attachment > spina-embed {
+    display: block;
+    border-radius: 0.375rem;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(121, 122, 184, var(--tw-ring-opacity));
   }
   figure .attachment__caption {
     display: none

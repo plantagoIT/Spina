@@ -1,4 +1,10 @@
 en:
+  activemodel:
+    attributes:
+      spina/embeds/youtube:
+        url: youtube.com/watch?v=...
+      spina/embeds/vimeo:
+        url: vimeo.com/...
   activerecord:
     attributes:
       spina/account:
@@ -94,11 +100,14 @@ en:
       spina/user:
         one: User
         other: Users
-  views:
-    spina:
-      user_mailer:
-        forgot: You requested an authentication reset. Click on the following link to chose a new password. If you did not request this email, please ignore it.
-        reset_time: This link will expire within two hours.
+  helpers:
+    label:
+      spina/embeds/button:
+        url: URL
+        label: Button label
+      spina/embeds/youtube:
+        url: Youtube URL
+      spina/embeds/vimeo:
   spina:
     accounts:
       contact_details: Contact details
@@ -122,6 +131,9 @@ en:
     delete_confirmation: Are you sure you want to delete <strong>%{subject}</strong>?
     edit: Edit
     edit_website: Edit your website
+    embeds:
+      embed_a_component: Embed a component
+      embed_component: Embed component
     forgot_password:
       expired: Your password reset token has expired
       mail_subject: Reset your password
