@@ -167,6 +167,8 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
+    nokogiri (1.12.5-x86_64-linux)
+      racc (~> 1.4)
     pg (1.2.3)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -230,7 +232,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (4.0.0.rc2)
+    selenium-webdriver (4.0.0.rc3)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2)
       rubyzip (>= 1.2.2)
@@ -283,7 +285,7 @@ DEPENDENCIES
   puma
   rails (~> 6.1.4)
   rails-controller-testing
-  selenium-webdriver (= 4.0.0.rc2)
+  selenium-webdriver (= 4.0.0.rc3)
   simplecov
   spina!
   webdrivers
