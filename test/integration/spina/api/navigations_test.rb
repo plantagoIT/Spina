@@ -6,10 +6,13 @@ module Spina
       setup do
         host! "dummy.test"
 
+        FactoryBot.reload
         @routes = Engine.routes
         @account = FactoryBot.create :account
-        @navigation = FactoryBot.create :navigation
-        FactoryBot.create :navigation_item, page: Spina::Page.first, navigation: @navigation
+        @page = FactoryBot.create :page, title: "A page"
+        @navigation = FactoryBot.create(:navigation) do |navigation|
+          FactoryBot.create_list(:navigation_item, 1, navigation: navigation, page: @page)
+        end
       end
 
       test "get all navigations" do

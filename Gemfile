@@ -2,7 +2,6 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gemspec
-gem 'rails', '~> 6.1.4'
 
 group :development do
   gem 'letter_opener'
@@ -19,7 +18,7 @@ group :test do
   
   # System tests
   gem 'capybara'
-  gem 'selenium-webdriver', '4.0.0.rc2'
+  gem 'selenium-webdriver', '~> 4.1.0'
   gem 'webdrivers'
 
   gem 'pry-rails'

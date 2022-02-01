@@ -1,4 +1,3 @@
-require 'sass-rails'
 require 'importmap-rails'
 require 'turbo-rails'
 require 'stimulus-rails'
@@ -9,9 +8,10 @@ require 'mobility'
 require 'rack-rewrite'
 require 'babosa'
 require 'attr_json'
-require 'view_component/engine'
+require 'view_component'
 require 'jsonapi/serializer'
 require 'browser'
+require 'sprockets/railtie'
 
 module Spina
   class Engine < ::Rails::Engine
@@ -28,8 +28,7 @@ module Spina
       end
     end
     
-    initializer "spina.parts" do
-      # Register JSON part types for editing content
+    config.to_prepare do
       Spina::Part.register(
         Spina::Parts::Line,
         Spina::Parts::MultiLine,
@@ -42,6 +41,7 @@ module Spina
         Spina::Parts::Date,
         Spina::Parts::Time
       )
-    end    
+    end
+
   end
 end

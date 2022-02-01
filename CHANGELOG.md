@@ -1,5 +1,40 @@
 # Spina CMS Changelog
 
+## 2.7
+
+### 2.7.0 (December 23rd, 2021)
+* Added support for Rails 7
+* Fixed ActiveStorage bugs
+
+## 2.6
+
+### 2.6.2 (December 22nd, 2021)
+* Updated gem dependencies
+
+### 2.6.1 (December 10th, 2021)
+* Removed sass-rails dependency
+
+### 2.6.0 (December 9th, 2021)
+* Spina CMS now requires Ruby 2.7+
+* Added Embed generator for Trix
+* Added --silent option to install generator
+* Added --first-deploy option to install generator
+* Added spina:first_deploy task
+* Added support for different mount paths
+* Fixed routes catch all bug
+* Updated gem dependencies
+
+## 2.5
+
+### 2.5.0 (October 17th, 2021)
+* Added custom embeds in Trix
+* Added auto-reloading themes
+* Added default position to new pages
+* Refactored loading of Stimulus controllers
+* Refactored autoloading of objects during initialization
+* Updated dependencies
+* Fixed flash pointer events
+
 ## 2.4
 
 ### 2.4.0 (September 9th, 2021)
