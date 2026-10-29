@@ -38,7 +38,9 @@ module Spina
         Spina::Parts::Option,
         Spina::Parts::Attachment,
         Spina::Parts::PageLink,
-        Spina::Parts::ResourceLink
+        Spina::Parts::ResourceLink,
+        Spina::Parts::Date,
+        Spina::Parts::Time
       )
     end
   end
