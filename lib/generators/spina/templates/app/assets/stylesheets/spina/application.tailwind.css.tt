@@ -9,9 +9,9 @@
 @theme {
   --font-body: "Metropolis";
 
-  --color-spina: #6865b4;
-  --color-spina-light: #797ab8;
-  --color-spina-dark: #3a3a70;
+  --color-spina: #ff3a1e;
+  --color-spina-light: #ff583c;
+  --color-spina-dark: #e11c00;
 
   --animate-duration: 600ms;
 }
